@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Neighbour from './Neighbour';
 
 const MyContext = React.createContext();
 
 class MyProvider extends Component {
   state = {
-    firstName: 'Harry', lastName: 'Potter', age: 24,
+    firstName: 'Tom', lastName: 'Holland', age: 24, country: 'America', job: 'Actor',
   }
-
   render() {
     return (
       <MyContext.Provider value={{
         state: this.state, growOld: () => this.setState({ age: this.state.age + 1 })
       }}>
-
         {this.props.children}
-
       </MyContext.Provider>
     );
   }
 }
+
 
 class Family extends Component {
   render() {
@@ -55,10 +54,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MyProvider>
+        <MyProvider value={{ state: this.state }}>
           <div>
             <p>I am in App component</p>
             <Family />
+            <br />
+            <Neighbour />
           </div>
         </MyProvider>
       </div>
