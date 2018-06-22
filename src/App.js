@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Neighbour from './Neighbour';
-
-const MyContext = React.createContext();
+import { MyContext } from './Context';
 
 class MyProvider extends Component {
   state = {
@@ -19,7 +18,6 @@ class MyProvider extends Component {
     );
   }
 }
-
 
 class Family extends Component {
   render() {
