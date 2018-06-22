@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Neighbour from './Neighbour';
+import FirstNeighbour from './FirstNeighbour';
 import { MyContext } from './Context';
 
 class MyProvider extends Component {
@@ -21,6 +22,7 @@ class MyProvider extends Component {
   }
 }
 
+
 class App extends Component {
   render() {
     return (
@@ -28,9 +30,11 @@ class App extends Component {
         <MyProvider value={{ state: this.state }}>
           <div>
             <p>I am in App component</p>
+
             <hr />
             <div className="childDiv">
               <Neighbour />
+         
             </div>
 
           </div>
