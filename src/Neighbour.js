@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
-const MyContext = React.createContext();
+import { MyContext } from './Context';
+//const MyContext = React.createContext();
 
 class Neighbour extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-     //   this.state ={}
+        //   this.state ={}
     }
     render() {
         return (
@@ -13,8 +13,8 @@ class Neighbour extends Component {
                 <MyContext.Consumer>
                     {context => (
                         <React.Fragment>
-                            <p>Country : {context.country}</p>
-                            <p>Job : {context.job}</p>
+                            <p>Country : {context.state.country}</p>
+                            <p>Job : {context.state.job}</p>
                         </React.Fragment>
                     )}
                 </MyContext.Consumer>
