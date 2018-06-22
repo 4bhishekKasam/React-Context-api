@@ -2,7 +2,9 @@
   text-align: center;
   background-color: #ccc;
   margin: 10px;
-  
+  width: 750px;
+  margin-left: 23%;
+  height: 120px;
 }
 
 .App-logo {
@@ -23,6 +25,10 @@
 
 .App-intro {
   font-size: large;
+}
+.childDiv{
+  background-color: #aadd;
+  margin: 10px;
 }
 
 @keyframes App-logo-spin {
