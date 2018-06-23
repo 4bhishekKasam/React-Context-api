@@ -16,7 +16,7 @@ class FirstNeighbour extends Component {
                         <React.Fragment>
                             <b> This is First Neighbours Home<br /></b>
                             <p>Name :  {context.state.firstName}  {context.state.lastName}</p>
-                            <p>My age is : {context.state.age}</p>
+                            <p> Age  : {context.state.age}</p>
                         </React.Fragment>
                     }
                 </MyContext.Consumer>
